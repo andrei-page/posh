@@ -1,0 +1,91 @@
+.b-footer
+	background-color: #3a3a3a
+	padding: 70px 0
+	+md
+		padding: 0 0 30px 0
+	&__menu
+		text-align: center
+		padding-top: 40px
+		+sm
+			width: 90%
+		ul
+			list-style: none
+			li
+				display: inline-block
+				margin: 0px 25px
+				&:last-child
+					margin-right: 0px
+				+lg
+					margin: 0 20px
+				+md
+					margin: 0 5px
+				+sm
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					justify-content: center
+				a
+					color: #ffffff;
+					+font-fallback('Lato')
+					font-size: 14px;
+					font-weight: 500;
+					text-transform: uppercase;
+					&:hover
+						color: #e8be7b
+						border-top: 1px solid #e8be7b
+						padding: 10px 0
+					+sm
+						font-size: 16px
+						margin-top: 10px
+	
+	&__logo
+		display: block
+		margin-left: auto
+		margin-right: auto
+		margin-top: 50px
+	&__social
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		padding-top: 20px
+		color: #ffffff;
+		font-family: Lato;
+		font-size: 18px;
+		font-weight: 400;
+		&:hover
+			text-decoration: underline;
+		+sm
+			padding-top: 30px
+		a
+			color: #fff
+			&:hover
+				color: #e8be7b
+
+	&__link__face
+		padding-right: 10px
+		&:after
+			display: inline-block
+			content: "/"
+			padding-left: 10px
+	&__link__inst 
+		padding-right: 10px
+		&:after
+			display: inline-block
+			content: "/"
+			padding-left: 10px
+	&__top
+
+#toTop 
+	text-align: center;
+	position: fixed;
+	bottom: 20px; /* отступ кнопки от нижнего края страницы*/
+	right: 20px;
+	cursor: pointer;
+#toTop svg
+	width: 50px;
+	height: 50px; 

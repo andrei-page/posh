@@ -1,0 +1,99 @@
+.b-wedding
+	&__bg1
+		background: url("../img/wedding-img.png") center no-repeat
+		height: 640px
+		margin-top: 120px
+		position: relative
+		background-size: cover
+	&__bg2
+		background: url("../img/wedding-img-1.jpg") center no-repeat
+		height: 640px
+		margin-top: 120px
+		position: relative
+		background-size: cover
+	&__bg3
+		background: url("../img/wedding-img-2.jpg") center no-repeat
+		height: 640px
+		margin-top: 120px
+		position: relative
+		background-size: cover
+	&__box
+		width: 72%
+		background-color: #fff
+		position: absolute
+		bottom: 60px
+		left: 14%
+		display: flex
+		padding-bottom: 30px
+		z-index: 1
+		+sm
+			display: block
+			text-align: center
+			
+			
+
+	&__box__title
+		justify-content: left
+		margin-left: 90px
+		margin-top: 35px
+		color: #3a3a3a;
+		+font-fallback("Butler")
+		font-weight: 500;
+		+sm
+			margin: 0 auto
+			margin-top: 20px
+			
+	&__heart
+		display: block
+		margin-left: auto
+		margin-right: auto
+		color: #e8be7b
+		padding-top: 10px
+		+sm
+			margin-bottom: 20px
+		
+		
+	&__box__text
+		justify-content: right
+		flex: 3
+		margin-top: 35px
+		margin-left: 60px
+		color: #3a3a3a;
+		+font-fallback("Lato")
+		font-size: 16px;
+		font-weight: 400;
+		+sm
+			margin: 0 auto
+			max-width: 90%
+		&:before
+			content: ""
+			position: absolute
+			left: 240px
+			background-color: #3a3a3a;
+			width: 2px;
+			height: 80px;
+			+sm
+				display: none
+				
+	&__arrow--left
+		color: #fff
+		position: absolute
+		right: 80px
+		top: 590px
+		cursor: pointer
+		+lg
+			right: 5%
+		+sm
+			top: 700px
+			right: 35%
+	&__arrow--right
+		color: #fff
+		position: absolute
+		left: 80px
+		top: 590px
+		cursor: pointer
+		+lg
+			left: 5%
+		+sm
+			top: 700px
+			left: 35%

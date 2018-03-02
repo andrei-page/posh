@@ -1,0 +1,108 @@
+.b-blog
+	text-align: center
+	background-color: #f7f7f7;
+	padding-bottom: 50px 
+	&__title
+		color: #3a3a3a;
+		+font-fallback("Butler")
+		font-size: 48px;
+		font-weight: 500;
+		line-height: persantage
+		/* Text style for "Latest Blo" */
+		letter-spacing: 1.44px;
+		padding-top: 121px
+	&__menu
+		text-align: center
+		padding-bottom: 60px
+		padding-top: 10px
+		ul
+			list-style: none
+			li
+				display: inline-block
+				margin-right: 40px
+				+md
+					margin-right: 10px
+				+sm
+					margin-right: -20px
+				a
+					color: #3a3a3a;
+					+font-fallback('Lato')
+					font-size: 16px;
+					font-weight: 400;
+					/* Text style for "reviews," */
+					color: #000
+					&:hover
+						color: #e8be7b;
+					&:focus
+						color: #e8be7b;
+	&__bg
+		width: 350px;
+		height: 285px;
+		background-color: #e8be7b;
+		margin-left: 16px
+		margin-top: 10px
+		+xl
+			height: 240px
+			width: 290px
+		+lg
+			height: 180px
+			width: 215px
+		+md
+			display: none
+	&__btn
+		color: #3a3a3a;
+		+font-fallback('Lato')
+		font-size: 14px;
+		font-weight: 500;
+		padding: 15px 50px		
+		text-transform: uppercase;
+		border: 1px solid #525252;
+		background-color: transparent
+		margin: 35px 0
+		+lg
+			margin-top: 40px
+		&:hover
+			background-color: #e9c283;
+			border: 1px solid #e9c283
+			transition: .5s
+
+	&__img
+		max-width: 100%
+		+md
+			display: block
+			margin: auto
+	&__img--first
+		position: absolute
+		left: 16px
+		max-width: 92.3%
+		+md
+			position: static
+			max-width: 110%
+	&__box
+		text-align: left
+		+md
+			text-align: center
+			
+	&__desc
+		color: #525252;
+		+font-fallback('Lato')
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 30px;
+		padding-top: 30px
+	&__desc1
+		color: #525252;
+		+font-fallback('Lato')
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 30px;
+		padding-top: 19px
+	&__text
+		color: #757575;
+		+font-fallback("Butler")
+		font-size: 16px;
+		font-weight: 300;
+
+	&--top
+		padding-top: 10px
+

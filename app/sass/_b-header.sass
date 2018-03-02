@@ -1,0 +1,308 @@
+.wrapper
+	overflow: hidden
+	
+.b-header
+	background: url('../img/header-bg.png') no-repeat
+	height: 100vh
+	width: 100
+	background-attachment: fixed
+	background-size: cover
+	+md
+		height: 120vh
+		background-position: center
+	+sm
+		background-position: center
+		height: 120vh
+	&__box__item
+		display: flex
+		+md
+			flex-direction: column
+	&__row
+		height: 60px
+		&:after
+			content: ""
+			display: block
+			width: 100%
+			height: 2px;
+			background-color: #ffffff;
+			opacity: 0.2;
+			+md
+				margin-top: 15px
+			
+	&__item
+		color: #fff
+		padding-top: 23px
+		justify-content: left
+		display: inline-flex
+		flex: 1
+		opacity: 0.8;
+		+font-fallback('Lato')
+		font-size: 14px;
+		font-weight: 400;
+		width: 1150px
+		+md
+			justify-content: left	
+		
+
+	&__social
+		color: #fff
+		justify-content: right
+		display: flex
+		+md
+			justify-content: left
+			margin-top: -20px
+
+	&__phone
+		padding-left: 10px
+		align-items: center
+
+	&__location
+		padding-left: 10px
+	
+	&--left
+		margin-left: 35px
+
+	&__link
+		margin-top: 26px
+		margin-right: 30px
+		&:last-child
+			margin-right: 0px
+	&__link__twit
+		&:hover
+			color: #1dcaff
+	&__link__face
+		&:hover
+			color: #3a589e
+	&__link__inst
+		&:hover
+			color: #c32aa3
+	&__link__flick
+		&:hover
+			color: #000
+	&__link__you
+		&:hover
+			color: red
+	&__logo
+		margin-top: 30px
+		float: left
+		+md
+			margin-top: 50px
+		+md
+			margin-top: 60px
+		
+	&__menu
+		float: right
+		padding-top: 40px
+		+lg
+			display: none
+			
+		ul
+			list-style: none
+			li
+				display: inline-block
+				margin: 0px 25px
+				&:last-child
+					margin-right: 0px
+				a
+					color: #ffffff;
+					+font-fallback('Lato')
+					font-size: 14px;
+					font-weight: 500;
+					text-transform: uppercase;
+					&:hover
+						border-top: 2px solid #e8be7b
+						padding: 42px 0
+	&__box
+		text-align: center
+		padding-top: 200px
+	&__box__title
+		+font-fallback("Butler")
+		color: #ffffff;
+		font-size: 64px;
+		font-weight: 500;
+	&__box__text
+		color: #ffffff;
+		+font-fallback('Lato')
+		font-size: 16px;
+		font-weight: 400;
+	&--color
+		color: #e8be7b;
+	&__item__btn
+		margin-top: 50px
+		+sm
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+	&__btn
+		color: #ffffff;
+		+font-fallback('Lato')
+		font-size: 14px;
+		font-weight: 500;
+		text-transform: uppercase;
+		border: 1px solid #fff
+		padding: 17px 55px
+		margin-right: 23px
+		+sm
+			width: 250px
+			display: block
+			margin-left: auto
+			margin-right: auto
+
+
+	
+	&--top
+		margin-top: 3px
+	&__btn__video 
+		background-color: #e8be7b
+		+font-fallback('Lato')
+		font-size: 14px;
+		font-weight: 500;
+		text-transform: uppercase;
+		border: none
+		padding: 18px 55px
+		color: #fff
+		+sm
+			width: 250px
+			display: block
+			margin-left: auto
+			margin-right: auto
+			margin-top: 20px
+		&:hover
+			background-color: transparent
+			border: 0.1px solid #fff
+			transition: .5s
+	&__icons__play
+		margin-left: 10px
+	&__video
+		width: 100%
+		height: 400px	
+		position: absolute
+		top: 10%
+		left: 0
+		height: 80vh
+		display: none
+			
+			
+.video__span
+	width: 50px
+	height: 50px
+	position: absolute
+	right: 80px
+	top: 100px
+	display: none
+		
+display
+	display: none
+
+.button_container
+	position: absolute
+	top: 90px
+	right: 10%;
+	height: $button-height;
+	width: $button-width;	
+	cursor: pointer;
+	z-index: 1000;
+	transition: opacity .25s ease;
+	display: none
+	+lg
+		display: block
+	+md
+		top: 55px
+	
+	&:hover
+		opacity: .7;
+	&.active .top
+		transform: translateY(11px) translateX(0) rotate(45deg);
+		background: $color-active;
+	&.active .middle
+		opacity: 0;
+		background: $color-active;
+	&.active 
+		.bottom 
+			transform: translateY(-11px) translateX(0) rotate(-45deg);
+			background: $color-active;
+.button__span
+	background: $color-main;
+	border: none;
+	height: 5px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition:  all .35s ease;
+	cursor: pointer;
+	&:nth-of-type(2)
+		top: 11px;
+
+	&:nth-of-type(3)
+		top: 22px;
+
+.overlay
+	position: absolute
+	background: #000
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0%;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .35s, visibility .35s, height .35s;
+	overflow: hidden;
+	&.open
+		opacity: .9;
+		visibility: visible;
+		height: 100%;
+		li 
+			animation: fadeInRight .5s ease forwards;
+			animation-delay: .35s;
+			&:nth-of-type(2)
+				animation-delay: .4s;
+			&:nth-of-type(3)
+				animation-delay: .45s;
+			&:nth-of-type(4)
+				animation-delay: .50s;
+nav
+	position: relative;
+	height: 47%;
+	top: 40%;
+	transform: translateY(-50%);
+	font-size: 50px;
+	font-weight: 400;
+	text-align: center;
+	ul
+		list-style: none;
+		padding: 0;
+		margin: 0 auto;
+		display: inline-block;
+		position: relative;
+		height: 100%;
+		li
+			display: block;
+			height: 25%;
+			height: calc(100% / 4);
+			min-height: 50px;
+			position: relative;
+			opacity: 0;
+			.overlay__link
+				display: block;
+				color: $color-link;
+				overflow: hidden;
+				+font-fallback('Lato')
+				font-size: 22px;
+				font-weight: 700;
+				letter-spacing: 2.4px;
+				text-transform: uppercase;
+				text-decoration: none
+
+@keyframes fadeInRight
+	0%
+		opacity: 0;
+		left: 20%;
+
+	100%
+		opacity: 1;
+		left: 0;
+

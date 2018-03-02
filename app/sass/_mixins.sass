@@ -1,0 +1,25 @@
+@font-face
+	font-family: "Butler";
+	src: url("fonts/Butler_Medium.otf")
+		
+
+=font-fallback($font)
+	font-family: $font, -apple-system, BlinkMacSystemFont, 'Lato',"Butler_Black","Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+
+$xl-width: 1200px;
+$lg-width: 992px;
+$md-width: 768px;
+$sm-width: 576px;
+
+=xl
+	@media (max-width: #{$xl-width - 1px})
+		@content
+=lg
+	@media (max-width: #{$lg-width - 1px})
+		@content
+=md
+	@media (max-width: #{$md-width - 1px})
+		@content
+=sm
+	@media (max-width: #{$sm-width - 1px})
+		@content
