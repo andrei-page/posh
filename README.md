@@ -1,4 +1,3 @@
-## init
+## git clone and npm i
 ```
- gulp
-```
+ git clone https://github.com/andrei-page/posh.git & npm i & gulp
